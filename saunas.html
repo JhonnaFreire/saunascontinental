@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saunas</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #0c6d6d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #059c9c;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        nav {
+            background-color: #059c9c;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #059c9c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            flex-shrink: 0;
+        }
+
+        #whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        #whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #whatsapp-button img {
+            display: block;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content h2 {
+                font-size: 1.8em;
+            }
+
+            .content p {
+                font-size: 1em;
+            }
+
+            nav {
+                padding: 10px 0;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+
+            /* Apilar imágenes una encima de la otra en móvil */
+            .image-section {
+                flex-direction: column; /* Cambiar la disposición de las imágenes a columna */
+                gap: 10px; /* Espaciado entre las imágenes */
+            }
+
+            .image-section img {
+                max-width: 90%; /* Reducir tamaño de las imágenes en móvil */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            .content h2 {
+                font-size: 1.6em;
+            }
+
+            .content p {
+                font-size: 0.9em;
+            }
+
+            nav a {
+                font-size: 0.9em;
+            }
+
+            .image-section img {
+                max-width: 80%; /* Aún más pequeñas en pantallas muy pequeñas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fabricación e instalación de Saunas en Tame Arauca</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="jacuzzis.html">Jacuzzis</a>
+        <a href="turcos.html">Turcos</a>
+        <a href="saunas.html">Saunas</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="content">
+        <h2>¿Qué es un Sauna?</h2>
+        <p>
+            Un sauna es una pequeña habitación o casa diseñada como un lugar para experimentar sesiones de calor seco o húmedo, o un establecimiento con una o más de estas instalaciones y auxiliares. El vapor y el calor hacen que los bañistas transpiren.
+        </p>
+        <p>
+            Los saunas se pueden dividir en dos estilos básicos: saunas convencionales que calientan el aire o saunas infrarrojos con los objetos calientes. Saunas infrarrojos pueden utilizar varios materiales en su zona de calentamiento, tales como el carbón, fibras de carbón activo, y otros materiales.
+        </p>
+        <h2>Importante</h2>
+      <p>
+        Fabricantes de saunas en Arauca, Fabricamos e
+        instalamos la sauna en su totalidad, piso, paredes, techo y unidad de
+        calor, la sauna se entrega totalmente lacado y pintado. Manejamos pino
+        patula y pino romeron
+      </p>
+
+        <div class="image-section">
+            <img src="./img/sauna1.jpg" alt="Sauna tradicional">
+            <img src="./img/sauna2.jpg" alt="Sauna infrarrojo">
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/573115225611" target="_blank" style="text-decoration: none;">
+        <div id="whatsapp-button">
+            <img src="./img/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px;">
+        </div>
+    </a>
+
+    <footer>
+        <p>&copy; 2024 Saunas Continental. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

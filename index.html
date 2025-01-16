@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saunas Continental - Fabricación e instalación</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      .top-bar {
+        background-color: #059c9c;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 1em;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 5px #059c9c;
+      }
+
+      .top-bar a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .top-bar a:hover {
+        text-decoration: underline;
+      }
+
+      header {
+        position: relative;
+        background-image: url("img/banner.jpg");
+        background-size: cover;
+        color: white;
+        padding: 60px 50px 40px;
+        text-align: center;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      header h1,
+      header p {
+        position: relative;
+        z-index: 2;
+      }
+
+      header h1 {
+        font-size: 3em;
+        margin: 20px;
+      }
+
+      header p {
+        font-size: 1.5em;
+        margin-top: 10px;
+      }
+
+      nav {
+        background-color: #059c9c;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.1em;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        background-color: #fff;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+      }
+
+      section h2 {
+        font-size: 2.5em;
+        color: #059c9c;
+        margin-bottom: 20px;
+      }
+
+      section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 20px;
+        max-width: 800px;
+      }
+
+      .image-gallery {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .image-gallery img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: #059c9c;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+      }
+
+      #whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+
+      #whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #whatsapp-button img {
+        width: 50px;
+        height: 50px;
+      }
+
+      /* Media Query para pantallas pequeñas */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2em;
+        }
+
+        header p {
+          font-size: 1.2em;
+        }
+
+        nav {
+          padding: 15px 0;
+        }
+
+        nav a {
+          font-size: 1em;
+          margin: 0 5px;
+        }
+
+        section {
+          padding: 20px;
+          margin: 15px 0;
+        }
+
+        section h2 {
+          font-size: 2em;
+        }
+
+        section p {
+          font-size: 1em;
+        }
+
+        .image-gallery {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .image-gallery img {
+          max-width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+
+      /* Media Query para dispositivos muy pequeños (móviles en modo vertical) */
+      @media (max-width: 480px) {
+        .top-bar {
+          font-size: 0.9em;
+          padding: 8px 0;
+        }
+
+        header h1 {
+          font-size: 1.8em;
+        }
+
+        header p {
+          font-size: 1em;
+        }
+
+        section h2 {
+          font-size: 1.8em;
+        }
+
+        section p {
+          font-size: 0.9em;
+        }
+
+        .image-gallery img {
+          max-width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Saunas Continental</h1>
+      <p>
+        Especialistas en fabricación e instalación de saunas, turcos y jacuzzis
+        en Arauca
+      </p>
+    </header>
+
+    <div class="top-bar">
+      <a href="tel:+573001234567">📞 Llamar: 311 522 5611</a>
+    </div>
+
+    <nav>
+      <a href="quienes_somos.html">Nosotros</a>
+      <a href="jacuzzis.html">Jacuzzis</a>
+      <a href="turcos.html">Turcos</a>
+      <a href="saunas.html">Saunas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <section id="jacuzzis">
+      <h2>Jacuzzis en Arauca</h2>
+      <p>
+        En Saunas Continental® ofrecemos jacuzzis para exteriores o interiores
+        en Arauca con la calidad que tanto nos caracteriza.
+        Le ofrecemos jacuzzis de las mejores marcas a nivel mundial, con la
+        asesoría y acompañamiento ideal para que su proyecto sea todo un éxito.
+        Nos ajustamos a su presupuesto sin comprometer de ninguna manera la
+        calidad que nos ha posicionado como los líderes en la fabricación y
+        distribución de jacuzzis en Arauca.
+      </p>
+
+      <!-- Galería de imágenes de jacuzzis -->
+      <div class="image-gallery">
+        <img src="img/jacuzzi1.jpg" alt="Jacuzzi 1" />
+        <img src="img/jacuzzi2.jpg" alt="Jacuzzi 2" />
+        <img src="img/jacuzzi3.jpg" alt="Jacuzzi 3" />
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/573115225611"
+      target="_blank"
+      style="text-decoration: none"
+    >
+      <div id="whatsapp-button">
+        <img src="./img/whatsapp.png" alt="WhatsApp" />
+      </div>
+    </a>
+
+    <footer>
+      <p>&copy; 2025 Saunas Continental - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
