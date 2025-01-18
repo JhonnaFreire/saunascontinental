@@ -1,215 +1,240 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Turcos</title>
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-        header {
-            background-color: #0c6d6d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+      header {
+        background-color: #0c6d6d;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
 
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      .content {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        flex: 1;
+      }
+
+      .content h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2em;
+        color: #059c9c;
+      }
+
+      .content p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: justify;
+      }
+
+      nav {
+        background-color: #059c9c;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.1em;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        background-color: #059c9c;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 20px;
+        flex-shrink: 0;
+      }
+
+      #whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+
+      #whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      #whatsapp-button img {
+        display: block;
+      }
+
+      .image-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .image-section img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1;
+          font-size: 2em;
         }
 
         .content h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #059c9c;
+          font-size: 1.8em;
         }
 
         .content p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-            text-align: justify;
+          font-size: 1em;
         }
 
         nav {
-            background-color: #059c9c;
-            padding: 10px;
-            text-align: center;
+          padding: 10px 0;
         }
 
         nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.1em;
+          font-size: 1em;
         }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background-color: #059c9c;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-            flex-shrink: 0;
-        }
-
-        #whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            border-radius: 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 10px;
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
-
-        #whatsapp-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        #whatsapp-button img {
-            display: block;
-        }
-
+        /* Apilar imágenes una encima de la otra en móvil */
         .image-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-top: 20px;
+          flex-direction: column; /* Cambiar la disposición de las imágenes a columna */
+          gap: 10px; /* Espaciado entre las imágenes */
         }
 
         .image-section img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          max-width: 90%; /* Reducir tamaño de las imágenes en móvil */
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.6em;
         }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .content h2 {
-                font-size: 1.8em;
-            }
-
-            .content p {
-                font-size: 1em;
-            }
-
-            nav {
-                padding: 10px 0;
-            }
-
-            nav a {
-                font-size: 1em;
-            }
-
-            /* Apilar imágenes una encima de la otra en móvil */
-            .image-section {
-                flex-direction: column; /* Cambiar la disposición de las imágenes a columna */
-                gap: 10px; /* Espaciado entre las imágenes */
-            }
-
-            .image-section img {
-                max-width: 90%; /* Reducir tamaño de las imágenes en móvil */
-            }
+        .content h2 {
+          font-size: 1.6em;
         }
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.6em;
-            }
-
-            .content h2 {
-                font-size: 1.6em;
-            }
-
-            .content p {
-                font-size: 0.9em;
-            }
-
-            nav a {
-                font-size: 0.9em;
-            }
-
-            .image-section img {
-                max-width: 80%; /* Aún más pequeñas en pantallas muy pequeñas */
-            }
+        .content p {
+          font-size: 0.9em;
         }
+
+        nav a {
+          font-size: 0.9em;
+        }
+
+        .image-section img {
+          max-width: 80%; /* Aún más pequeñas en pantallas muy pequeñas */
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Fabricación e instalación de Turcos en Tame Arauca</h1>
+      <h1>Fabricación e instalación de Turcos en Tame Arauca</h1>
     </header>
 
     <nav>
-        <a href="index.html">Inicio</a>
-        <a href="jacuzzis.html">Jacuzzis</a>
-        <a href="turcos.html">Turcos</a>
-        <a href="saunas.html">Saunas</a>
-        <a href="contacto.html">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="jacuzzis.html">Jacuzzis</a>
+      <a href="turcos.html">Turcos</a>
+      <a href="saunas.html">Saunas</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
 
     <div class="content">
-        <h2>Baños Turcos</h2>
-        <p>
-            ¿Te gustaría instalar un baño turco en la comodidad de tu casa? En Saunas Continental® somos fabricantes de equipos para baños turcos, generadores a gas y eléctricos.
-        </p>
-        <p>
-            Brindamos asesorías para cualquier tipo de equipo generador de vapor para turcos en cualquier parte de Arauca. Todos nuestros equipos están fabricados con los más altos estándares de seguridad y tecnología, manejando equipamiento totalmente automatizado, ya que no es necesario manipular el equipo directamente. Todo se maneja desde un tablero automático o una aplicación en tu smartphone.
-        </p>
-        <p>
-            Ofrecemos un año de garantía en cualquiera de nuestros equipos por defectos de fabricación o instalación.
-        </p>
-
-        <div class="image-section">
-            <img src="./img/turco1.jpg" alt="Instalación de baño turco">
-            <img src="./img/turco2.jpg" alt="Baño turco en casa">
-        </div>
+      <h2>Baños Turcos</h2>
+      <p>
+        ¿Te gustaría instalar un baño turco en la comodidad de tu casa? En
+        Saunas Continental® somos fabricantes de equipos generadores de vapor
+        para baños turcos, gas y eléctricos.
+      </p>
+      <p>
+        Brindamos asesorías para cualquier tipo de equipo generador de vapor
+        para turcos en cualquier parte de Arauca. Todos nuestros equipos están
+        fabricados con los más altos estándares de seguridad y tecnología,
+        manejando equipamiento totalmente automatizado, ya que no es necesario
+        manipular el equipo directamente. Todo se maneja desde un tablero
+        automático o una aplicación en tu smartphone.
+      </p>
+      <p>
+        Ofrecemos un año de garantía en cualquiera de nuestros equipos por
+        defectos de fabricación o instalación.
+      </p>
+      <div class="image-section">
+        <img src="./img/turco1.jpg" alt="Instalación de baño turco" />
+        <img src="./img/turco2.jpg" alt="Baño turco en casa" />
+      </div>
+      <h2>Equipos generadores de vapor</h2>
+      <p>Generador de vapor a gas natural o propano</p>
+      <div class="image-section">
+        <img src="./img/equipoagas.jpg" alt="genrador de vapor a gas">
+        <img src="./img/equipoagas1.jpg" alt="genrador a gas natural">
+      </div>
+      <p>Generador de vapor electrico</p>
+      <div class="image-section">
+        <img src="./img/electrica1.jpg" alt="genrador de vapor electrico">
+      </div>
     </div>
 
     <!-- WhatsApp Button -->
-    <a href="https://wa.me/573115225611" target="_blank" style="text-decoration: none;">
-        <div id="whatsapp-button">
-            <img src="./img/whatsapp.png" alt="WhatsApp" style="width: 50px; height: 50px;">
-        </div>
+    <a
+      href="https://wa.me/573115225611"
+      target="_blank"
+      style="text-decoration: none"
+    >
+      <div id="whatsapp-button">
+        <img
+          src="./img/whatsapp.png"
+          alt="WhatsApp"
+          style="width: 50px; height: 50px"
+        />
+      </div>
     </a>
 
     <footer>
-        <p>&copy; 2024 Saunas Continental. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Saunas Continental. Todos los derechos reservados.</p>
     </footer>
-</body>
+  </body>
 </html>
